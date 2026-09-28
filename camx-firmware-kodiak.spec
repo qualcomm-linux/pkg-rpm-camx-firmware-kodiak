@@ -1,17 +1,19 @@
 %global debug_package %{nil}
 %global __os_install_post %{nil}
 
-%global upstream_tag 260831
+%global upstream_tag 260925
+%global payload_release 1
+%global payload_distro el10
 
 Name:           camx-firmware-kodiak
-Version:        1.0.7
+Version:        1.0.8
 Release:        1%{?dist}
 Summary:        Qualcomm CamX camera stack firmware package (prebuilt payload)
 
 License:        LicenseRef-Qualcomm-Proprietary
 URL:            http://support.cdmatech.com
 
-Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/camx.qclinux.0.0/%{upstream_tag}/prebuilt_el10/%{name}-%{version}_%{release}.aarch64.tar.gz
+Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/camx.qclinux.0.0/%{upstream_tag}/prebuilt_rpm/%{name}-%{version}_%{payload_release}.%{payload_distro}.aarch64.tar.gz
 
 ExclusiveArch:  aarch64
 
@@ -40,5 +42,5 @@ cp -a usr %{buildroot}/
 %{_prefix}/lib/firmware/qcom/qcm6490/CAMERA_ICP_170.elf
 
 %changelog
-* Thu Sep 10 2026 Kripalsinh Rana <kripalsi@qti.qualcomm.com> - 1.0.7-1
+* Mon Sep 28 2026 Qualcomm Camera Team <camx.deb.maintainers@qti.qualcomm.com> - 1.0.8-1
 - Initial RPM packaging-only release for the prebuilt Kodiak firmware payload.
