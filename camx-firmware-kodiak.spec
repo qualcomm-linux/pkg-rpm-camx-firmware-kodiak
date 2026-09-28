@@ -9,12 +9,8 @@ Name:           camx-firmware-kodiak
 Version:        1.0.8
 Release:        1%{?dist}
 Summary:        Qualcomm CamX camera stack firmware package (prebuilt payload)
-
-License:        LicenseRef-Qualcomm-Proprietary
-URL:            http://support.cdmatech.com
-
+License:        LicenseRef-Qualcomm-nologin-binaries-license
 Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/camx.qclinux.0.0/%{upstream_tag}/prebuilt_rpm/%{name}-%{version}_%{payload_release}.%{payload_distro}.aarch64.tar.gz
-
 ExclusiveArch:  aarch64
 
 %description
